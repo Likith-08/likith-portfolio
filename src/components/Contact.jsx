@@ -1,4 +1,9 @@
+import emailjs from "@emailjs/browser";
+import { useRef } from "react";
+
 function Contact() {
+
+  const form = useRef();
 
   const cardStyle = {
     background: "linear-gradient(145deg, #1e293b, #0f172a)",
@@ -30,6 +35,24 @@ function Contact() {
     cursor: "pointer",
   };
 
+  const sendEmail = (e) => {
+    e.preventDefault();
+
+    emailjs.sendForm(
+      "service_92rw1gb",        // your service ID
+      "template_rautyqd",       // 🔴 replace this
+      form.current,
+      "Gx3xkvda60NeuuQQr"         // 🔴 replace this
+    )
+    .then(() => {
+      alert("Message sent successfully!");
+    })
+    .catch((error) => {
+      alert("Failed to send message");
+      console.log(error);
+    });
+  };
+
   return (
     <section
       id="contact"
@@ -49,41 +72,50 @@ function Contact() {
         Feel free to reach out for collaboration or job opportunities.
       </p>
 
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "center",
-        }}
-      >
+      <div style={{ display: "flex", justifyContent: "center" }}>
         <div style={cardStyle}>
+
           <h3 style={{ marginBottom: "20px" }}>
             Send me a message instantly.
           </h3>
 
-          <input
-            type="text"
-            placeholder="Your Name"
-            style={inputStyle}
-          />
+          {/* 🔥 FORM STARTS HERE */}
+          <form ref={form} onSubmit={sendEmail}>
 
-          <input
-            type="email"
-            placeholder="Your Email"
-            style={inputStyle}
-          />
+            <input
+              type="text"
+              name="from_name"
+              placeholder="Your Name"
+              style={inputStyle}
+              required
+            />
 
-          <textarea
-            placeholder="Your Message"
-            rows="4"
-            style={inputStyle}
-          ></textarea>
+            <input
+              type="email"
+              name="from_email"
+              placeholder="Your Email"
+              style={inputStyle}
+              required
+            />
 
-          <button style={buttonStyle}>
-            Send Message
-          </button>
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="4"
+              style={inputStyle}
+              required
+            ></textarea>
+
+            <button type="submit" style={buttonStyle}>
+              Send Message
+            </button>
+
+          </form>
+          {/* 🔥 FORM ENDS HERE */}
+
         </div>
       </div>
-
+      
     </section>
   );
 }
