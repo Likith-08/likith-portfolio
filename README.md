@@ -1,16 +1,101 @@
-# React + Vite
+# 🚀 Likith Reddy – Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Welcome to my personal portfolio website built using *React + Vite*.
 
-Currently, two official plugins are available:
+This website showcases my skills, projects, and contact information.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+---
 
-## React Compiler
+## 👨‍💻 About Me
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+I am an aspiring Software Developer with strong interest in:
 
-## Expanding the ESLint configuration
+- Python
+- Backend Development
+- REST APIs
+- SQL
+- Problem Solving
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+I enjoy building scalable applications and learning new technologies.
+
+---
+
+## 🛠 Tech Stack Used
+
+- React
+- JavaScript
+- Vite
+- HTML5
+- CSS3
+
+---
+
+## ✨ Features
+
+- Animated Hero Section
+- Dynamic Role Typewriter Effect
+- Smooth Scroll Navigation
+- Interactive Project Cards
+- Responsive Design
+- Contact Form Section
+- Resume Download Option
+
+---
+
+## 📂 Project Structure
+
+
+likith-portfolio/
+│
+├── public/
+├── src/
+│   ├── components/
+│   ├── App.jsx
+│   ├── main.jsx
+│
+├── package.json
+├── vite.config.js
+
+
+---
+
+## 💻 Installation & Setup
+
+To run this project locally:
+
+bash
+npm install
+npm run dev
+
+
+Then open:
+
+
+http://localhost:5173
+
+
+---
+
+## 🌐 Live Demo
+
+(Will add after deployment)
+
+---
+
+## 📬 Contact Me
+
+📧 Email: likithmachireddy@gmail.com  
+🔗 LinkedIn: https://linkedin.com/in/likithmachireddy0803  
+
+---
+
+## 📌 Future Improvements
+
+- Add backend integration
+- Add project filtering
+- Improve animations
+- Deploy with custom domain
+
+---
+
+⭐ If you like this project, feel free to star the repository!
