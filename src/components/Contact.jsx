@@ -39,13 +39,16 @@ function Contact() {
     e.preventDefault();
 
     emailjs.sendForm(
-      "service_92rw1gb",        // your service ID
-      "template_rautyqd",       // 🔴 replace this
+      "service_92rw1gb",
+      "template_rautyqd",
       form.current,
-      "Gx3xkvda60NeuuQQr"         // 🔴 replace this
+      "Gx3xkvda60NeuuQQr"
     )
     .then(() => {
       alert("Message sent successfully!");
+
+      // 🔥 CLEAR FORM AFTER SUCCESS
+      form.current.reset();
     })
     .catch((error) => {
       alert("Failed to send message");
@@ -79,7 +82,6 @@ function Contact() {
             Send me a message instantly.
           </h3>
 
-          {/* 🔥 FORM STARTS HERE */}
           <form ref={form} onSubmit={sendEmail}>
 
             <input
@@ -111,7 +113,7 @@ function Contact() {
             </button>
 
           </form>
-          {/* 🔥 FORM ENDS HERE */}
+
 
         </div>
       </div>
