@@ -92,7 +92,7 @@ function Navbar() {
           </a>
           {/* 🔥 Instagram Channel */}
            <a
-            href="https://instagram.com/YOUR_USERNAME"
+            href="https://instagram.com/likithmachireddy_08"
             target="_blank"
             rel="noopener noreferrer"
             style={{
