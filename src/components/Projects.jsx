@@ -1,27 +1,26 @@
 import { useState } from "react";
 
 function Projects() {
-
   const [hoveredCard, setHoveredCard] = useState(null);
   const [hoveredButton, setHoveredButton] = useState(null);
 
+  // 🔹 Card Style
   const getCardStyle = (index) => ({
-    background: "linear-gradient(145deg, #1e293b, #0f172a)",
+    background:
+      hoveredCard === index
+        ? "linear-gradient(145deg, #1e40af, #0f172a)"
+        : "linear-gradient(145deg, #1e293b, #0f172a)",
     padding: "25px",
     borderRadius: "15px",
     width: "320px",
-    boxShadow: hoveredCard === index
-      ? "0 20px 40px rgba(0,0,0,0.7)"
-      : "0 10px 25px rgba(0,0,0,0.5)",
-    transform: hoveredCard === index
-      ? "translateY(-10px) scale(1.03)"
-      : "translateY(0px)",
-    border: hoveredCard === index
-      ? "1px solid #06b6d4"
-      : "1px solid transparent",
-    transition: "all 0.4s ease",
+    boxShadow:
+      hoveredCard === index
+        ? "0 0 25px #3b82f6"
+        : "0 10px 25px rgba(0,0,0,0.5)",
+    transition: "0.3s"
   });
 
+  // 🔹 Tech Badge Style
   const badgeStyle = {
     backgroundColor: "#334155",
     padding: "4px 10px",
@@ -30,23 +29,19 @@ function Projects() {
     marginRight: "8px"
   };
 
-  const getButtonStyle = (id) => ({
+  // 🔹 Button Style
+  const getButtonStyle = (type) => ({
     padding: "8px 16px",
     borderRadius: "20px",
     border: "none",
-    background: hoveredButton === id
-      ? "linear-gradient(90deg, #0ea5e9, #2563eb)"
-      : "linear-gradient(90deg, #06b6d4, #3b82f6)",
+    background:
+      hoveredButton === type
+        ? "linear-gradient(90deg, #22d3ee, #2563eb)"
+        : "linear-gradient(90deg, #06b6d4, #3b82f6)",
     color: "white",
     fontWeight: "bold",
     cursor: "pointer",
-    transform: hoveredButton === id
-      ? "translateY(-3px)"
-      : "translateY(0px)",
-    boxShadow: hoveredButton === id
-      ? "0 8px 20px rgba(6,182,212,0.6)"
-      : "none",
-    transition: "all 0.3s ease"
+    transition: "0.3s"
   });
 
   return (
@@ -93,25 +88,40 @@ function Projects() {
           </div>
 
           <p style={{ fontSize: "14px", color: "#cbd5e1" }}>
-            NLP-based emotion classification system trained on 5000+ samples.
+            NLP-based emotion classification system trained on 5000+
+            samples achieving 85% accuracy.
           </p>
 
           <div style={{ marginTop: "15px", display: "flex", gap: "10px" }}>
-            <button
-              style={getButtonStyle("github1")}
-              onMouseEnter={() => setHoveredButton("github1")}
-              onMouseLeave={() => setHoveredButton(null)}
+            <a
+              href="https://github.com/Likith-08"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
             >
-              GitHub
-            </button>
+              <button
+                style={getButtonStyle("github1")}
+                onMouseEnter={() => setHoveredButton("github1")}
+                onMouseLeave={() => setHoveredButton(null)}
+              >
+                GitHub
+              </button>
+            </a>
 
-            <button
-              style={getButtonStyle("demo1")}
-              onMouseEnter={() => setHoveredButton("demo1")}
-              onMouseLeave={() => setHoveredButton(null)}
+            <a
+              href="https://your-live-demo-link.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
             >
-              Live Demo
-            </button>
+              <button
+                style={getButtonStyle("demo1")}
+                onMouseEnter={() => setHoveredButton("demo1")}
+                onMouseLeave={() => setHoveredButton(null)}
+              >
+                Live Demo
+              </button>
+            </a>
           </div>
         </div>
 
@@ -130,25 +140,40 @@ function Projects() {
           </div>
 
           <p style={{ fontSize: "14px", color: "#cbd5e1" }}>
-            Voice-controlled assistant built using Python.
+            Voice-controlled assistant built using Python with
+            speech-to-text and text-to-speech integration.
           </p>
 
           <div style={{ marginTop: "15px", display: "flex", gap: "10px" }}>
-            <button
-              style={getButtonStyle("github2")}
-              onMouseEnter={() => setHoveredButton("github2")}
-              onMouseLeave={() => setHoveredButton(null)}
+            <a
+              href="https://github.com/Likith-08"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
             >
-              GitHub
-            </button>
+              <button
+                style={getButtonStyle("github2")}
+                onMouseEnter={() => setHoveredButton("github2")}
+                onMouseLeave={() => setHoveredButton(null)}
+              >
+                GitHub
+              </button>
+            </a>
 
-            <button
-              style={getButtonStyle("demo2")}
-              onMouseEnter={() => setHoveredButton("demo2")}
-              onMouseLeave={() => setHoveredButton(null)}
+            <a
+              href="https://your-live-demo-link.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
             >
-              Live Demo
-            </button>
+              <button
+                style={getButtonStyle("demo2")}
+                onMouseEnter={() => setHoveredButton("demo2")}
+                onMouseLeave={() => setHoveredButton(null)}
+              >
+                Live Demo
+              </button>
+            </a>
           </div>
         </div>
 
