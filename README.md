@@ -78,7 +78,7 @@ http://localhost:5173
 
 ## 🌐 Live Demo
 
-(Will add after deployment)
+https://likith-portfolio-virid.vercel.app/
 
 ---
 
