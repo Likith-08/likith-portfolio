@@ -79,17 +79,23 @@ function Projects() {
           onMouseEnter={() => setHoveredCard(0)}
           onMouseLeave={() => setHoveredCard(null)}
         >
-          <h3>Emotion Recognition using BERT</h3>
+          <h3>Multimodal Emotion Detection System</h3>
 
           <div style={{ marginBottom: "12px" }}>
             <span style={badgeStyle}>Python</span>
             <span style={badgeStyle}>Transformers</span>
-            <span style={badgeStyle}>BERT</span>
+            <span style={badgeStyle}>CNN</span>
+            <span style={badgeStyle}>Streamlit</span>
+            <span style={badgeStyle}>NLP</span>
           </div>
 
           <p style={{ fontSize: "14px", color: "#cbd5e1" }}>
-            NLP-based emotion classification system trained on 5000+
-            samples achieving 85% accuracy.
+           This system predicts emotions from three different input modalities:<br/>
+
+           1. Facial Expression (Image / Webcam)<br/>
+           2.  Speech Emotion (Audio File)<br/>
+           3. Text Emotion (Sentence Input)<br/>
+          Each model predicts independently, and a Majority Fusion model determines the final emotion.
           </p>
 
           <div style={{ marginTop: "15px", display: "flex", gap: "10px" }}>
@@ -107,21 +113,22 @@ function Projects() {
                 GitHub
               </button>
             </a>
-
-            <a
-              href="https://your-live-demo-link.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ textDecoration: "none" }}
+             <a href="https://multimodal--emotion-detection-system-dmah6krx5ygaxdchvcpmqe.streamlit.app" 
+              target="_blank">
+             </a>
+            <button
+              style={getButtonStyle("demo1")}
+              onMouseEnter={() => setHoveredButton("demo1")}
+              onMouseLeave={() => setHoveredButton(null)}
+              onClick={() => 
+                window.open(
+                  "https://multimodal--emotion-detection-system-dmah6krx5ygaxdchvcpmqe.streamlit.app",
+                  "_blank"
+                )
+              }
             >
-              <button
-                style={getButtonStyle("demo1")}
-                onMouseEnter={() => setHoveredButton("demo1")}
-                onMouseLeave={() => setHoveredButton(null)}
-              >
-                Live Demo
-              </button>
-            </a>
+              Live Demo 
+            </button>
           </div>
         </div>
 
@@ -160,25 +167,23 @@ function Projects() {
               </button>
             </a>
 
-            <a
-              href="https://your-live-demo-link.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              style={{ textDecoration: "none" }}
-            >
-              <button
-                style={getButtonStyle("demo2")}
-                onMouseEnter={() => setHoveredButton("demo2")}
-                onMouseLeave={() => setHoveredButton(null)}
-              >
-                Live Demo
-              </button>
-            </a>
-          </div>
+         <button
+              style={getButtonStyle("demo1")}
+              onMouseEnter={() => setHoveredButton("demo1")}
+              onMouseLeave={() => setHoveredButton(null)}
+              onClick={() => {
+                const section = document.getElementById("case-study");
+                section?.scrollIntoView({ behavior: "smooth" });
+              }}
+         >
+            Live Demo
+         </button>
+        </div>
         </div>
 
       </div>
     </section>
+    
   );
 }
 
