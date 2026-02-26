@@ -167,17 +167,22 @@ function Projects() {
               </button>
             </a>
 
-         <button
+         <a href="https://github.com/Likith-08/Bruce--Personal-Voice-Assistant/releases/tag/v1.0" 
+              target="_blank">
+             </a>
+            <button
               style={getButtonStyle("demo1")}
               onMouseEnter={() => setHoveredButton("demo1")}
               onMouseLeave={() => setHoveredButton(null)}
-              onClick={() => {
-                const section = document.getElementById("case-study");
-                section?.scrollIntoView({ behavior: "smooth" });
-              }}
-         >
-            Live Demo
-         </button>
+              onClick={() => 
+                window.open(
+                  "https://github.com/Likith-08/Bruce--Personal-Voice-Assistant/releases/tag/v1.0",
+                  "_blank"
+                )
+              }
+            >
+              Live Demo 
+            </button>
         </div>
         </div>
 
