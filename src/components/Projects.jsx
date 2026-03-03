@@ -100,7 +100,7 @@ function Projects() {
 
           <div style={{ marginTop: "15px", display: "flex", gap: "10px" }}>
             <a
-              href="https://github.com/Likith-08"
+              href="https://github.com/Likith-08/multimodal--emotion-detection-System"
               target="_blank"
               rel="noopener noreferrer"
               style={{ textDecoration: "none" }}
@@ -159,7 +159,7 @@ It features secure role-based authentication, real-time performance tracking, an
 
           <div style={{ marginTop: "15px", display: "flex", gap: "10px" }}>
             <a
-              href="https://github.com/Likith-08"
+              href="https://github.com/Likith-08/Ai-Interview-Assistant"
               target="_blank"
               rel="noopener noreferrer"
               style={{ textDecoration: "none" }}
