@@ -138,17 +138,23 @@ function Projects() {
           onMouseEnter={() => setHoveredCard(1)}
           onMouseLeave={() => setHoveredCard(null)}
         >
-          <h3>Bruce: Personal Voice Assistant</h3>
+          <h3>AI Interview Performance Analytics Platform</h3>
 
           <div style={{ marginBottom: "12px" }}>
             <span style={badgeStyle}>Python</span>
-            <span style={badgeStyle}>SpeechRecognition</span>
-            <span style={badgeStyle}>pyttsx3</span>
+            <span style={badgeStyle}>Flask</span>
+            <span style={badgeStyle}>SQlite</span>
+            <span style={badgeStyle}>Javascript</span>
+            <span style={badgeStyle}>Data Analytics</span>
+            <span style={badgeStyle}>DeepLearning</span>
+            <span style={badgeStyle}>PyTorch</span>
+            <span style={badgeStyle}>REST API</span>
+            <span style={badgeStyle}>Git</span>
           </div>
 
           <p style={{ fontSize: "14px", color: "#cbd5e1" }}>
-            Voice-controlled assistant built using Python with
-            speech-to-text and text-to-speech integration.
+AI Interview Performance & Analytics Dashboard is a full-stack web application that evaluates mock interview performance using AI-driven scoring and behavioral analysis.<br/>
+It features secure role-based authentication, real-time performance tracking, and an interactive analytics dashboard with KPI insights.
           </p>
 
           <div style={{ marginTop: "15px", display: "flex", gap: "10px" }}>
@@ -167,7 +173,7 @@ function Projects() {
               </button>
             </a>
 
-         <a href="https://github.com/Likith-08/Bruce--Personal-Voice-Assistant/releases/tag/v1.0" 
+         <a href="https://likith-08-ai-interview-assistant.hf.space" 
               target="_blank">
              </a>
             <button
@@ -176,7 +182,7 @@ function Projects() {
               onMouseLeave={() => setHoveredButton(null)}
               onClick={() => 
                 window.open(
-                  "https://github.com/Likith-08/Bruce--Personal-Voice-Assistant/releases/tag/v1.0",
+                  "https://likith-08-ai-interview-assistant.hf.space",
                   "_blank"
                 )
               }
