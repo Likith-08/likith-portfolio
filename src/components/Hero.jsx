@@ -55,7 +55,7 @@ function Hero() {
       </p>
 
       <div style={styles.buttonContainer}>
-        <a href="/Macireddy_Resume.pdf" target="_blank" rel="noopener noreferrer">
+        <a href="/Macireddy_Resume_08.pdf" target="_blank" rel="noopener noreferrer">
           <button
             style={{
               ...styles.button,
