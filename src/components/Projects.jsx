@@ -192,6 +192,67 @@ It features secure role-based authentication, real-time performance tracking, an
         </div>
         </div>
 
+         {/* 🔥 Project 3*/}
+        <div
+          style={getCardStyle(1)}
+          onMouseEnter={() => setHoveredCard(1)}
+          onMouseLeave={() => setHoveredCard(null)}
+        >
+          <h3>ServiceHub – Full Stack Service Marketplace</h3>
+
+          <div style={{ marginBottom: "12px" }}>
+            <span style={badgeStyle}>React</span>
+            <span style={badgeStyle}>Node.js</span>
+            <span style={badgeStyle}>Express </span>
+            <span style={badgeStyle}>MongoDB</span>
+            <span style={badgeStyle}>Socket.IO</span>
+            <span style={badgeStyle}>Razorpay</span>
+          </div>
+
+          <p style={{ fontSize: "14px", color: "#cbd5e1" }}>
+Developed a scalable full-stack marketplace where users can discover and book services, while providers manage offerings and bookings. Implemented real-time communication and integrated secure payment processing.
+Highlights:<br/>
+Real-time booking updates with Socket.IO <br/>
+Role-based authentication (Customer & Provider) <br/>
+Dynamic service management system<br/>
+End-to-end booking workflow with payment integration
+          </p>
+
+          <div style={{ marginTop: "15px", display: "flex", gap: "10px" }}>
+            <a
+              href="https://github.com/Likith-08/service-marketplace"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none" }}
+            >
+              <button
+                style={getButtonStyle("github2")}
+                onMouseEnter={() => setHoveredButton("github2")}
+                onMouseLeave={() => setHoveredButton(null)}
+              >
+                GitHub
+              </button>
+            </a>
+
+         <a href="https://service-marketplace-taupe.vercel.app/" 
+              target="_blank">
+             </a>
+            <button
+              style={getButtonStyle("demo1")}
+              onMouseEnter={() => setHoveredButton("demo1")}
+              onMouseLeave={() => setHoveredButton(null)}
+              onClick={() => 
+                window.open(
+                  "https://service-marketplace-taupe.vercel.app/",
+                  "_blank"
+                )
+              }
+            >
+              Live Demo 
+            </button>
+        </div>
+        </div>
+
       </div>
     </section>
     
