@@ -210,7 +210,7 @@ It features secure role-based authentication, real-time performance tracking, an
           </div>
 
           <p style={{ fontSize: "14px", color: "#cbd5e1" }}>
-Developed a scalable full-stack marketplace where users can discover and book services, while providers manage offerings and bookings. Implemented real-time communication and integrated secure payment processing.
+Developed a scalable full-stack marketplace where users can discover and book services, while providers manage offerings and bookings. Implemented real-time communication and integrated secure payment processing.<br/>
 Highlights:<br/>
 Real-time booking updates with Socket.IO <br/>
 Role-based authentication (Customer & Provider) <br/>
