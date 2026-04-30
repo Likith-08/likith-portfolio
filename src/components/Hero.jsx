@@ -15,9 +15,20 @@ function Hero() {
   const [currentRoleIndex, setCurrentRoleIndex] = useState(0);
   const [displayText, setDisplayText] = useState("");
   const [isDeleting, setIsDeleting] = useState(false);
+  const [hovered, setHovered] = useState(null);
 
-  const [hovered, setHovered] = useState(null); // 👈 added
+  // ✅ MOBILE DETECTION
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
 
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
+  // ✅ TYPEWRITER
   useEffect(() => {
     const currentText = roles[currentRoleIndex];
     const typingSpeed = isDeleting ? 50 : 100;
@@ -41,27 +52,60 @@ function Hero() {
   }, [displayText, isDeleting, currentRoleIndex]);
 
   return (
-    <section style={styles.section}>
-      <h1 style={styles.heading}>Hi, I'm Likith 👋</h1>
+    <section
+      style={{
+        ...styles.section,
+        padding: isMobile ? "30px 15px" : "40px"
+      }}
+    >
+      <h1
+        style={{
+          ...styles.heading,
+          fontSize: isMobile ? "28px" : "48px"
+        }}
+      >
+        Hi, I'm Likith 👋
+      </h1>
 
-      <h3 style={styles.typewriter}>
+      <h3
+        style={{
+          ...styles.typewriter,
+          fontSize: isMobile ? "20px" : "40px",
+          minHeight: isMobile ? "30px" : "45px"
+        }}
+      >
         {displayText}
         <span className="cursor"></span>
       </h3>
 
-      <p style={styles.paragraph}>
+      <p
+        style={{
+          ...styles.paragraph,
+          fontSize: isMobile ? "14px" : "16px",
+          maxWidth: isMobile ? "100%" : "700px"
+        }}
+      >
         Building scalable backend systems using Python, Flask, REST APIs, and SQL.
         Passionate about clean architecture, problem-solving, and real-world applications.
       </p>
 
-      <div style={styles.buttonContainer}>
+      <div
+        style={{
+           ...styles.buttonContainer,
+              flexDirection: "row",   // ✅ ALWAYS ROW
+              gap: isMobile ? "10px" : "20px",
+              width: isMobile ? "100%" : "auto",
+              justifyContent: "center"
+        }}
+      >
         <a href="/Macireddy_Resume_08.pdf" target="_blank" rel="noopener noreferrer">
           <button
             style={{
               ...styles.button,
-              ...(hovered === "resume" && styles.buttonHover)
+              width: isMobile ? "100%" : "auto",
+              ...(hovered === "resume" && !isMobile && styles.buttonHover)
             }}
-            onMouseEnter={() => setHovered("resume")}
+            onMouseEnter={() => !isMobile && setHovered("resume")}
             onMouseLeave={() => setHovered(null)}
           >
             View My Resume
@@ -72,9 +116,10 @@ function Hero() {
           <button
             style={{
               ...styles.button,
-              ...(hovered === "projects" && styles.buttonHover)
+              width: isMobile ? "100%" : "auto",
+              ...(hovered === "projects" && !isMobile && styles.buttonHover)
             }}
-            onMouseEnter={() => setHovered("projects")}
+            onMouseEnter={() => !isMobile && setHovered("projects")}
             onMouseLeave={() => setHovered(null)}
           >
             View My Projects
@@ -94,30 +139,24 @@ const styles = {
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    textAlign: "center",
-    padding: "40px"
+    textAlign: "center"
   },
   heading: {
-    fontSize: "48px",
     fontWeight: "bold",
     marginBottom: "15px"
   },
   typewriter: {
     color: "#06b6d4",
-    fontSize: "40px",
     fontWeight: "600",
-    marginBottom: "20px",
-    minHeight: "45px"
+    marginBottom: "20px"
   },
   paragraph: {
-    maxWidth: "700px",
     color: "#cbd5e1",
     marginBottom: "30px",
     lineHeight: "1.6"
   },
   buttonContainer: {
-    display: "flex",
-    gap: "20px"
+    display: "flex"
   },
   button: {
     padding: "12px 25px",

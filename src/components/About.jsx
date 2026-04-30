@@ -1,13 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
 function About() {
 
   const [hover, setHover] = useState(false);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
 
   const cardStyle = {
     background: "linear-gradient(145deg, #1e293b, #0f172a)",
-    padding: "40px",
-    borderRadius: "20px",
+    padding: isMobile ? "25px 18px" : "40px",
+    borderRadius: isMobile ? "15px" : "20px",
     maxWidth: "900px",
     margin: "0 auto",
     textAlign: "center",
@@ -25,18 +34,18 @@ function About() {
       style={{
         backgroundColor: "#0f172a",
         color: "white",
-        padding: "100px 40px"
+        padding: isMobile ? "80px 15px" : "100px 40px"
       }}
     >
       <div
         style={cardStyle}
-        onMouseEnter={() => setHover(true)}
-        onMouseLeave={() => setHover(false)}
+        onMouseEnter={() => !isMobile && setHover(true)}
+        onMouseLeave={() => !isMobile && setHover(false)}
       >
         <h2
           style={{
-            fontSize: "36px",
-            marginBottom: "25px"
+            fontSize: isMobile ? "26px" : "36px",
+            marginBottom: isMobile ? "15px" : "25px"
           }}
         >
           About Me
@@ -44,8 +53,8 @@ function About() {
 
         <p
           style={{
-            fontSize: "16px",
-            lineHeight: "1.8",
+            fontSize: isMobile ? "14px" : "16px",
+            lineHeight: isMobile ? "1.6" : "1.8",
             color: "#cbd5e1"
           }}
         >
