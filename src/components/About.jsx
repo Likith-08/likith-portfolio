@@ -35,7 +35,7 @@ function About() {
         backgroundColor: "#0f172a",
         color: "white",
         padding: isMobile ? "80px 15px" : "100px 40px",
-        scrollMarginTop: "100px"
+        scrollMarginTop: "120px"
       }}
     >
       <div
