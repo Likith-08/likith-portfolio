@@ -98,7 +98,7 @@ function Hero() {
               justifyContent: "center"
         }}
       >
-        <a href="/Macireddy_Resume_08.pdf" target="_blank" rel="noopener noreferrer">
+        <a href="/Likith_08_Resume.pdf" target="_blank" rel="noopener noreferrer">
           <button
             style={{
               ...styles.button,
