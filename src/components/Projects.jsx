@@ -194,7 +194,7 @@ It features secure role-based authentication, real-time performance tracking, an
 
          {/* 🔥 Project 3*/}
         <div
-          style={getCardStyle(1)}
+          style={getCardStyle(2)}
           onMouseEnter={() => setHoveredCard(2)}
           onMouseLeave={() => setHoveredCard(null)}
         >
