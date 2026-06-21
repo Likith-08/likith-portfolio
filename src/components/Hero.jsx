@@ -53,6 +53,7 @@ function Hero() {
 
   return (
     <section
+     id="home"
       style={{
         ...styles.section,
         padding: isMobile ? "30px 15px" : "40px"
