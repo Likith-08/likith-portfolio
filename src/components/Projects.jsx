@@ -177,8 +177,8 @@ It features secure role-based authentication, real-time performance tracking, an
               target="_blank">
              </a>
             <button
-              style={getButtonStyle("demo1")}
-              onMouseEnter={() => setHoveredButton("demo1")}
+              style={getButtonStyle("demo2")}
+              onMouseEnter={() => setHoveredButton("demo2")}
               onMouseLeave={() => setHoveredButton(null)}
               onClick={() => 
                 window.open(
@@ -195,7 +195,7 @@ It features secure role-based authentication, real-time performance tracking, an
          {/* 🔥 Project 3*/}
         <div
           style={getCardStyle(1)}
-          onMouseEnter={() => setHoveredCard(1)}
+          onMouseEnter={() => setHoveredCard(2)}
           onMouseLeave={() => setHoveredCard(null)}
         >
           <h3>ServiceHub – Full Stack Service Marketplace</h3>
@@ -238,8 +238,8 @@ End-to-end booking workflow with payment integration
               target="_blank">
              </a>
             <button
-              style={getButtonStyle("demo1")}
-              onMouseEnter={() => setHoveredButton("demo1")}
+              style={getButtonStyle("demo3")}
+              onMouseEnter={() => setHoveredButton("demo3")}
               onMouseLeave={() => setHoveredButton(null)}
               onClick={() => 
                 window.open(
